@@ -1,0 +1,96 @@
+@import "./_grid.scss";
+
+.hero {
+  background: url(/images/hero.svg) bottom center;
+  background-size: cover;
+  position: relative;
+
+  > div:first-child {
+    padding-top: 150px;
+
+    @include break(sm) {
+      padding-top: 20%;
+    }
+  }
+}
+
+.hero__car {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero__title {
+  font-size: 1.75rem;
+  color: #fff;
+  font-weight: 700;
+
+  @include break(sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.hero__subtitle {
+  font-family: Andale;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero__text {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.hero__buttons {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  a {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+.hero__socials {
+  list-style: none;
+  margin: 0;
+  padding: 15px 0 0 0;
+  display: flex;
+
+  li {
+    padding: 0 20px 0 0;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
+
+    @include break(md) {
+      width: 60px;
+      height: 60px;
+    }
+
+    svg {
+      color: #fff;
+      width: 24px;
+    }
+
+    &:hover {
+      background: var(--primary);
+
+      svg {
+        color: #fff;
+      }
+    }
+  }
+}

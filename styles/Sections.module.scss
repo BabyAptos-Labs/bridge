@@ -1,0 +1,158 @@
+@import "./_grid.scss";
+
+.section__title {
+  color: var(--primary-light);
+  font-weight: 900;
+  font-size: 2rem;
+  display: block;
+  text-transform: uppercase;
+
+  @include break(md) {
+    font-size: 3.75rem;
+  }
+}
+
+.textright {
+  text-align: right;
+}
+
+// Bridge
+.section__bridge {
+  text-align: center;
+  background: rgb(45,37,49);
+  background: url(/images/dots.jpg) no-repeat center bottom, linear-gradient(0deg, rgba(45,37,49,1) 0%, rgba(255,255,255,0) 100%);
+  background-size: cover, contain;
+}
+
+// Tokenomics
+.section__tokenomics {
+  text-align: center;
+  background: rgb(45,37,49);
+  background: url(/images/dots_rev.jpg) no-repeat center top, linear-gradient(0deg, rgba(45,37,49,1) 0%, rgba(255,255,255,0) 100%);
+  background-size: cover, contain;
+
+  strong {
+    font-size: 1.375rem;
+  }
+}
+
+.tax {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 4rem;
+
+  &:before {
+    width: 2px;
+    height: 100%;
+    content: ' ';
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -1px;
+    top: 0;
+  }
+
+  > div {
+    padding: 0 15px;
+  }
+}
+
+.contract {
+  font-family: Andale;
+  font-size: 0.8rem;
+  color: #000;
+  background: #fff;
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+
+  @include break(sm) {
+    font-size: 1.25rem;
+  }
+
+  @include break(md) {
+    font-size: 2rem;
+  }
+
+  span {
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 5px;
+
+    @include break(sm) {
+      padding: 15px;
+    }
+  }
+
+  i {
+    padding: 10px 5px;
+    font-style: normal;
+    display: inline-block;
+
+    @include break(sm) {
+      padding: 15px;
+    }
+  }
+}
+
+.partners {
+  margin-top: 4rem;
+
+  a {
+    padding: 0 25px;
+  }
+}
+
+.section__roadmap {
+
+  .roadmap__phase {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+
+    @include break(sm) {
+      font-size: 1.75rem;
+    }
+
+    > div {
+      background: url(/images/phase.png);
+      width: 100px;
+      height: 110px;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+
+      @include break(sm) {
+        width: 140px;
+        height: 154px;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .roadmap__phase_active > div {
+    background-image: url(/images/phase_active.png);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    font-size: 1rem;
+    line-height: 1.75em !important;
+
+    @include break(sm) {
+      font-size: 1.375rem;
+    }
+
+    strong {
+      color: var(--primary-light);
+    }
+  }
+}

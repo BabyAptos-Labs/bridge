@@ -1,0 +1,17 @@
+@import '../node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/variables/_grid-variables.scss';
+@import '../node_modules/@drewbot/sass-flexbox-grid/public/sass-flexbox/scss/main.scss';
+
+@mixin break($breakpoint) {
+	@if($breakpoint == xs)  {
+		@media (min-width: $xs-start) { @content }
+	}
+	@if($breakpoint == sm)  {
+		@media (min-width: $sm-start) { @content }
+	}
+	@if($breakpoint == md)  {
+		@media (min-width: $md-start) { @content }
+	}
+	@if($breakpoint == lg)  {
+		@media (min-width: $lg-start) { @content }
+	}
+}

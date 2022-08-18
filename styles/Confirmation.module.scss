@@ -4,13 +4,13 @@
   width: 100%;
   height: 100%;
   z-index: 50;
-  background: #131314da;
+  background: rgba(255,255,255,.4);
   position: fixed;
   left: 0;
   top: 0;
 
   [class^="col-"] {
-    padding: 0.25rem;
+    padding: 0.5rem;
 
     @include break(sm) {
       padding: 0.75rem 1rem;
@@ -27,7 +27,8 @@
     top: 50%;
     transform: translate(-50%,-50%);
     border-radius: 25px;
-    background: #26262b;
+    background: #1C1B21;
+    color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,.3);
     max-width: 600px;
     width: 100%;
@@ -62,12 +63,8 @@
     color: #000;
 
     .confirmation__val {
-      font-size: 1rem;
+      font-size: 1.25rem;
       font-weight: bold;
-
-      @include break(sm) {
-        font-size: 1.25rem;
-      }
     }
   }
 
@@ -79,12 +76,6 @@
 
   .confirmation__label {
     font-size: 0.85rem;
-  }
-
-  .confirmation__label_cb {
-    font-size: 1rem;
-    margin-left: 0.25rem;
-    font-weight: bold;
   }
 
   p {
@@ -102,14 +93,9 @@
 
   .confirmation__val {
     word-break: break-all;
-    margin-top: 0rem;
-    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
     min-height: 28px;
-
-    @include break(sm) {
-      font-size: 1rem;
-      margin-top: 0.5rem;
-    }
 
     > div {
       display: inline-block;
@@ -138,12 +124,6 @@
   margin-top: 15px;
   font-size: 0.75rem;
   border-radius: 5px;
-  height: 50px;
-  overflow-y: auto;
-
-  @include break(sm) {
-    height: auto;
-  }
 
   &:hover {
     color: var(--highlight);
@@ -168,14 +148,4 @@
     color: #fff;
     width: 14px;
   }
-}
-
-.disabled {
-  opacity: 0.5;
-  cursor:not-allowed;
-}
-
-.sendToDisabled > div:last-child {
-  filter: blur(5px);
-  cursor:not-allowed;
 }

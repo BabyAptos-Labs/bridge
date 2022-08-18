@@ -1,0 +1,329 @@
+@import "./_grid.scss";
+
+.dapp_box {
+  background: #232325;
+  padding: 30px;
+  padding-top: 50px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+
+  a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  &.dapp__box_bridge {
+    padding-top: 30px;
+    margin-top: 2rem;
+  }
+
+  @include break(sm) {
+    > div {
+      margin-bottom: 5px;
+      align-items: flex-end;
+    }
+  }
+
+  p {
+    line-height: 1.25rem;
+    color: #fff;
+  }
+
+  .dapp__advanced {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    color: #fff;
+
+    &:hover {
+      color: var(--highlight);
+    }
+
+    svg {
+      width: 20px;
+      margin-left: 10px;
+    }
+  }
+
+  .dapp__label {
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-right: 15px;
+
+    .question {
+      span {
+        color: var(--primary);
+        font-weight: bold;
+        position: absolute;
+        right: -2px;
+        top: -10px;
+        cursor: pointer;
+        width: 40px;
+        height: 20px;
+        text-align: right;
+        transition: all 0.25s ease;
+
+        &:hover {
+          color: #8c6d96;
+        }
+      }
+
+      div {
+        display: none;
+      }
+
+      &:hover div {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        left: 100%;
+        background: var(--primary);
+        padding: 10px;
+        font-size: 0.8rem;
+        width: 200px;
+        z-index: 3;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: #000;
+    transition: all 0.25s ease;
+    height: 50px;
+    font-size: 1rem;
+
+    @include break(md) {
+      font-size: 1.125rem;
+    }
+
+    &:focus {
+      border-color: var(--primary);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  textarea {
+    height: 110px;
+    resize: none;
+  }
+
+  .button_circle {
+    position: absolute;
+    left: 50%;
+    bottom: -42px;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    text-transform: lowercase;
+    font-size: 1.25rem;
+    font-weight: 900;
+
+    @include break(md) {
+      width: 125px;
+      height: 125px;
+      bottom: -60px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(172, 137, 183, 0.25);
+    }
+  }
+
+  .amount {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 5px;
+    background: var(--primary);
+    border-radius: 5px;
+
+    > div {
+      overflow: hidden;
+      flex: 1 0 0;
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      text-align: center;
+      color: #fff;
+      font-size: 0.8rem;
+      display: block;
+      padding: 9px 2px;
+      transition: 0.4s ease background, 0.4s ease border-color;
+      border: 2px solid transparent;
+      user-select: none;
+
+      @include break(md) {
+        font-size: 1.125rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        border: 2px solid #fff;
+      }
+    }
+
+    input:checked + label {
+      color: var(--primary);
+      background: #fff;
+    }
+  }
+}
+
+.dapp__notification {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px;
+  margin-top: 1rem;
+}
+
+.dapp__blocks {
+  margin-top: 3rem;
+  position: relative;
+  z-index: 5;
+
+  > div > div {
+    background: #232325;
+    padding: 30px;
+    border-radius: 20px;
+    height: 100%;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 900;
+  }
+}
+
+// Bridge
+.dapp__input_out {
+  display: flex;
+  background: var(--primary);
+  border-radius: 5px;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center !important;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.dapp__input_chain {
+  font-size: 1rem;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  cursor: default;
+
+  span {
+    display: inline-block;
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+
+  @include break(md) {
+    font-size: 1.125rem;
+  }
+}
+
+.dapp__input_chain_to {
+  height: 50px;
+}
+
+.dapp__input_val {
+  text-align: right;
+
+  input {
+    border: 0 !important;
+    height: 36px !important;
+    text-align: right;
+    padding: 0 0 0 15px !important;
+    font-size: 1.5rem !important;
+
+    &:hover {
+      border: 0;
+      padding: 0;
+    }
+  }
+}
+
+.dapp__address {
+  font-size: 1.5rem;
+  color: var(--primary-light);
+  word-break: break-all;
+}
+
+.dapp__input_balance {
+  color: red;
+  font-size: 0.85rem;
+  color: #8c8c8c;
+
+  a {
+    color: var(--highlight);
+    text-decoration: none;
+  }
+}
+
+.dapp__bridge_switch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: #fff;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -17px;
+  margin-left: -17px;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  svg {
+    width: 14px;
+  }
+}

@@ -1,0 +1,99 @@
+@import "./_grid.scss";
+
+.select_box {
+  position: relative;
+  cursor: pointer;
+  color: #7a5ca6;
+}
+
+.select_box.visible .select_box__options {
+  display: block;
+}
+
+.select_box__selected {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background: #fff;
+  user-select: none;
+  color: #000;
+  height: 50px;
+  border: 2px solid #fff;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+
+  @include break(md) {
+    font-size: 1.125rem;
+  }
+
+  svg {
+    width: 10px;
+    margin-left: auto;
+  }
+}
+
+.select_box.visible .select_box__selected {
+  border-color: var(--primary);
+}
+
+.select_box__options {
+  margin-top: 10px;
+  user-select: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: none;
+  background: #fff;
+  color: #000;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.select_box__items {
+  padding: 0 15px;
+  transition: all 0.2s ease;
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+.select_box__items:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.select_box input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.select_box label {
+  cursor: pointer;
+  align-items: center;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.select_box span,
+.select_box__selected span {
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-right: 10px;
+}
+
+.select_box .select_box__icon {
+  height: 30px;
+  display: block;
+  position: relative;
+}

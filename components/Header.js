@@ -114,6 +114,11 @@ const Header = (props) => {
                                                 Whitepaper
                                             </a>
                                         </li>
+                                        <li>
+                                            <a href="http://bearswap.net" rel="noreferrer">
+                                                BearSwap
+                                            </a>
+                                        </li>
                                         {/* <li>
                                             <a
                                                 href="https://pancakeswap.finance/swap?outputCurrency=0x69B0af16FDd2E80968eb505cd41DC26efb2B80BF"

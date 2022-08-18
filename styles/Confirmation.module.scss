@@ -1,0 +1,181 @@
+@import "./_grid.scss";
+
+.dapp_confirmation {
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: #131314da;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  [class^="col-"] {
+    padding: 0.25rem;
+
+    @include break(sm) {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  .dapp_confirmation__inner > div {
+    padding: 1rem 2rem;
+  }
+  
+  > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 25px;
+    background: #26262b;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    max-width: 600px;
+    width: 100%;
+    z-index: 100;
+
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  header {
+    font-size: 1rem;
+    font-weight: 900;
+    border-bottom: 2px solid #3f3f46;
+    padding: 1.25rem;
+    position: relative;
+
+    @include break(sm) {
+      font-size: 1.25rem;
+      padding: 1.6rem;
+    }
+
+    @include break(md) {
+      font-size: 1.77rem;
+    }
+  }
+
+  .confirmation__sendTo {
+    padding-top: 0;
+    background: var(--highlight);
+    color: #000;
+
+    .confirmation__val {
+      font-size: 1rem;
+      font-weight: bold;
+
+      @include break(sm) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .confirmation__copy {
+    width: 1.75rem;
+    background: transparent;
+    border: 0;
+  }
+
+  .confirmation__label {
+    font-size: 0.85rem;
+  }
+
+  .confirmation__label_cb {
+    font-size: 1rem;
+    margin-left: 0.25rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 0.85rem;
+    line-height: 1rem;
+
+    small {
+      color: #8c8c8c;
+    }
+
+    @include break(md) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .confirmation__val {
+    word-break: break-all;
+    margin-top: 0rem;
+    font-size: 0.85rem;
+    min-height: 28px;
+
+    @include break(sm) {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    > div {
+      display: inline-block;
+      position: relative;
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+
+      @include break(md) {
+        width: 27px;
+        height: 27px;
+        margin-right: 10px;
+      }
+    }
+    
+    display: flex;
+    align-items: center;
+  }
+}
+
+.confirmation__recovery {
+  border: 1px solid #3f3f46;
+  padding: 0.75rem;
+  line-height: 1.125rem;
+  word-break: break-all;
+  margin-top: 15px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  height: 50px;
+  overflow-y: auto;
+
+  @include break(sm) {
+    height: auto;
+  }
+
+  &:hover {
+    color: var(--highlight);
+    border-color: var(--highlight);
+    cursor: pointer;
+  }
+}
+
+.closeModal {
+  position: absolute;
+  right: 2rem;
+  margin-top: -15px;
+  top: 50%;
+  background: transparent;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  width: auto !important;
+  cursor: pointer;
+
+  svg {
+    color: #fff;
+    width: 14px;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor:not-allowed;
+}
+
+.sendToDisabled > div:last-child {
+  filter: blur(5px);
+  cursor:not-allowed;
+}

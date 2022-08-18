@@ -23,6 +23,9 @@ const MixerInterface = ({ input_network, user_account, onConnect }) => {
     const [mixerData, setMixerData] = useState(false);
     const [contractTransaction, setContractTransaction] = useState(false);
 
+    const [buttonEnabled, setButtonEnabled] = useState(false);
+    const [isCompleted, setIsCompleated] = useState(false);
+
     const [recipientNetwork, setRecipientNetwork] = useState(false);
     const [callerNetwork, setCallerNetwork] = useState(false);
     const [advancedOptions, setAdvancedOptions] = useState(false);
@@ -90,7 +93,11 @@ const MixerInterface = ({ input_network, user_account, onConnect }) => {
         if (net_w) {
             setCurrency(net_w.currency);
 
-            if (net_w.currency == "MATIC" || net_w.currency == "FTM" || net_w.currency == "PLS") {
+            if (
+                net_w.currency == "MATIC" ||
+                net_w.currency == "FTM" ||
+                net_w.currency == "PLS"
+            ) {
                 setSelectableAmounts([
                     false,
                     50000000000000000000,
@@ -112,6 +119,14 @@ const MixerInterface = ({ input_network, user_account, onConnect }) => {
                     100000000000000000000,
                     1000000000000000000000,
                     10000000000000000000000,
+                ]);
+            } else if (net_w.currency == "WDOGE") {
+                setSelectableAmounts([
+                    false,
+                    500000000000000000000,
+                    1000000000000000000000,
+                    10000000000000000000000,
+                    50000000000000000000000,
                 ]);
             } else {
                 setSelectableAmounts([
@@ -276,6 +291,14 @@ const MixerInterface = ({ input_network, user_account, onConnect }) => {
         setAdvancedOptions(!advancedOptions);
     };
 
+    useEffect(() => {
+        setAccepted(false);
+        setButtonEnabled(false);
+        setIsCompleated(false);
+    }, [mixerData]);
+
+    const [accepted, setAccepted] = useState(false);
+
     return (
         <>
             {mixerData && (
@@ -287,6 +310,12 @@ const MixerInterface = ({ input_network, user_account, onConnect }) => {
                     onConnect={onConnect}
                     limitations={selectableAmounts}
                     contractTransaction={contractTransaction}
+                    setButtonEnabled={setButtonEnabled}
+                    isCompleted={isCompleted}
+                    setIsCompleated={setIsCompleated}
+                    buttonEnabled={buttonEnabled}
+                    accepted={accepted}
+                    setAccepted={setAccepted}
                 />
             )}
 
@@ -539,7 +568,11 @@ const AmountOption = ({ value, setAmount, currency }) => {
             />
             <label htmlFor={"amount-" + value}>
                 {value
-                    ? value / 1000000000000000000 + " " + currency
+                    ? value / 1000000000000000000 > 5
+                        ? Math.ceil(value / 1000000000000000000) +
+                          " " +
+                          currency
+                        : value / 1000000000000000000 + " " + currency
                     : "Custom"}
             </label>
         </div>

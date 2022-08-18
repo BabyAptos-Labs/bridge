@@ -1,0 +1,48 @@
+.walletConnect {
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: #3f3f4685;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 25px;
+    background: #1A1A1E;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    z-index: 100;
+
+    button {
+      display: block;
+      width: 100%;
+      &:last-child {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.closeModal {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: transparent;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  width: auto !important;
+  cursor: pointer;
+
+  svg {
+    color: #fff;
+    width: 10px;
+  }
+}

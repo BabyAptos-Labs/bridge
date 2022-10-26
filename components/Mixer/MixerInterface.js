@@ -533,7 +533,7 @@ const Content = ({
                 </Col>
                 <Col xs="12" customClass="pb-0">
                     <p className="text-center">
-                        For support join to our <a href="https://t.me/ProtocolBEAR" rel="norefferer" target="_blank">Telegram group</a><br />
+                        For support join to our <a href="https://t.me/BabyAptosCommunity" rel="norefferer" target="_blank">Telegram group</a><br />
                         <small>Powered by <a href="https://blockblend.io/" target="_blank" rel="noreferrer">blockblend.io</a></small>
                     </p>
                 </Col>

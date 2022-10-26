@@ -6,18 +6,18 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>BEAR PROTOCOL</title>
-        <meta property="og:title" content="BEAR PROTOCOL" key="og_title" />
-        <meta name="twitter:title" content="BEAR PROTOCOL" key="twitter_title" />
+        <title>Baby Aptos Bridge</title>
+        <meta property="og:title" content="Baby Aptos Bridge" key="og_title" />
+        <meta name="twitter:title" content="Baby Aptos Bridge" key="twitter_title" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Bear Protocol is made with the intention of storing value and building wealth, even in a bear market. With our large all-in-one ecosystem, we drive all profits directly to the holders of $BEAR." />
+        <meta name="description" content="Baby Aptos Bridge is made with the intention of bridging funds between blockchains safely and anonymously." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://protocolbear.com/" />
-        <meta property="og:description" content="Bear Protocol is made with the intention of storing value and building wealth, even in a bear market. With our large all-in-one ecosystem, we drive all profits directly to the holders of $BEAR." />
+        <meta property="og:url" content="http://babyaptosbridge.com/" />
+        <meta property="og:description" content="Baby Aptos Bridge is made with the intention of bridging funds between blockchains safely and anonymously." />
         <meta property="og:image" content="/images/social.jpg" />
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="http://protocolbear.com/" />
-        <meta property="twitter:description" content="Bear Protocol is made with the intention of storing value and building wealth, even in a bear market. With our large all-in-one ecosystem, we drive all profits directly to the holders of $BEAR." />
+        <meta property="twitter:url" content="http://babyaptosbridge.com/" />
+        <meta property="twitter:description" content="Baby Aptos Bridge is made with the intention of bridging funds between blockchains safely and anonymously." />
         <meta property="twitter:image" content="/images/social.jpg" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />

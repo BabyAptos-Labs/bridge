@@ -50,7 +50,7 @@ export default function App() {
                             <p>
                                 Complete the form above and click
                                 &quot;next&quot;. Confirm the transaction to
-                                deposit funds into the BEAR Anonymous
+                                deposit funds into the Baby Aptos Anonymous
                                 Bridge.
                             </p>
                             <p>

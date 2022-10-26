@@ -54,7 +54,7 @@ const Header = (props) => {
                                         <Image
                                             styles={{ marginRight: "3rem" }}
                                             src="/images/logo.png"
-                                            alt="BEAR PROTOCOL"
+                                            alt="Baby Aptos Bridge"
                                             width={200}
                                             height={47}
                                             layout="responsive"
@@ -105,20 +105,16 @@ const Header = (props) => {
                                 ) : (
                                     <>
                                         <li>
-                                            <a href="http://protocolbear.com/" rel="noreferrer">
+                                            <a href="http://BabyAptosLabs.com/" rel="noreferrer">
                                                 Website
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="http://protocolbear.com/assets/BearWhitepaper.pdf" rel="noreferrer">
+                                            <a href="/" rel="noreferrer">
                                                 Whitepaper
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="http://BearSwap.net" rel="noreferrer">
-                                                BearSwap
-                                            </a>
-                                        </li>
+                                        
                                         {/* <li>
                                             <a
                                                 href="https://pancakeswap.finance/swap?outputCurrency=0x69B0af16FDd2E80968eb505cd41DC26efb2B80BF"

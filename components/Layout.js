@@ -9,9 +9,9 @@ const walletConnector = new NodeWalletConnect(
     },
     {
         clientMeta: {
-            description: "WalletConnect for BEAR PROTOCOL",
+            description: "WalletConnect for Baby Aptos Bridge",
             url: process.env.URL,
-            name: "BEAR PROTOCOL",
+            name: "Baby Aptos Bridge",
         },
     }
 );
